@@ -1,4 +1,4 @@
-# Salam Hotel <for more here is my link https://
+# Salam Hotel <for more here is my link https://https://github.com/MELESEASHENAFITESFAYE/Hotel-Booking
  ## INTRODUCTION
 
  This website created for our customers easly booking selam hotel rooms a place where they are before came to our hotel
@@ -13,7 +13,6 @@
 * service
 * gallery
 * Restaurant
-* Contact us
 * Testimonials
 ## Navigation structure
 The website will contain the following navigation structure. 
@@ -22,8 +21,7 @@ Alternate suggestions on page structure are welcome:
 * service 
 * galley
 * booking 
-* testimonials  
-* contact us 
+* testimonials 
 ## Features
 *Visual Events calendar 
 *Website Keyword Search 
