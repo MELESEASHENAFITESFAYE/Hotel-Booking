@@ -187,13 +187,13 @@
                     </div>
                     <div class="content">
                         <div class="indent">
-                            <% users.forEach(function(user){ %>
-                            <h2 style="padding-top:100px"><%= user.name %> Thank you for being a member of us</h2>
-                            <form action="/logout?_method=DELETE" method="post">
-                                <button type="submit" style="float: right;position:sticky;top: 299%;
-    left: 80%;" class="btn btn-lg btn-primary">Logout</button>
+                            <a href="/users/logout" class="btn btn-primary" style="float: left;">Logout</a>
+                            <form action="/delete" method="post">
+                                <input type="text" class="form-control" name="id" value="<%= user._id %>" hidden>
+                                <button type="submit" class="btn btn-danger"> Delete Account </button>
+                                <h1 style="text-align: center;padding-top:30px">Hi <span
+                                        style="color:black"><%= user.name %></span> Welcome </h1>
                             </form>
-                            <% }) %>
                         </div>
                     </div>
                 </div>

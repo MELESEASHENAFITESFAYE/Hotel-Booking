@@ -188,29 +188,31 @@
                     <div class="indent">
                         <div class="clear"></div>
                         <h2 style="padding-top:100px">Register Here</h2>
-                        <form action="/register" method="post">
-                            <div class="row">
-                                <input style="margin-right:200px;" class="form-control" type="text" name="name"
-                                    id="name" required placeholder="User Name">
+                        <form action="/users/register" method="post" style="padding: 0% 0%;">
+                            <%-include("./partials/messages")-%>
+                            <div class="form-row">
+                                <input type="name" id="name" name="name" class="form-control" placeholder="Enter Name"
+                                    value="<%= typeof name != 'undefined' ? name : '' %>" />
                             </div>
-                            <div class="row">
-                                <input style="margin-right:200px;" class="form-control" type="email" name="email"
-                                    id="email" required placeholder="User Email">
+                            <div class="form-row">
+                                <input type="email" id="email" name="email" class="form-control"
+                                    placeholder="Enter Email" value="<%= typeof email != 'undefined' ? email : '' %>" />
                             </div>
-                            <div class="row">
-                                <input style="margin-right:200px;" class="form-control" type="password" name="password"
-                                    id="password" required placeholder="User password">
+                            <div class="form-row">
+                                <input type="password" id="password" name="password" class="form-control"
+                                    placeholder="Create Password"
+                                    value="<%= typeof password != 'undefined' ? password : '' %>" />
                             </div>
-                            <div class="row" style="margin-top: 10px;">
-                                <button type="submit" class="btn btn-lg btn-primary">Register</button>
-                                <a href="/login" style="text-decoration: none;padding:5px 120px;margin-left:10px"
-                                    class="btn btn-lg btn-secondary">Sign In</a>
+                            <div class="form-row">
+                                <input type="password" id="password2" name="password2" class="form-control"
+                                    placeholder="Create Password"
+                                    value="<%= typeof password2 != 'undefined' ? password2 : '' %>" />
                             </div>
-                            <div class="row">
-
+                            <div class="form-row">
+                                <button type="submit" class="btn btn-primary"> Register </button>
+                                <a href="/users/login" class="btn btn-primary"> Login </a>
                             </div>
-                    </div>
-                    </form>
+                        </form>
                 </div>
             </div>
         </div>

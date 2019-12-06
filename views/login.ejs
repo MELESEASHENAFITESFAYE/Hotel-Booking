@@ -188,27 +188,24 @@
                     <div class="indent">
                         <div class="clear"></div>
                         <h2 style="padding-top:100px">Sign In</h2>
-                        <form action="/login" method="post">
-                            <div class="row">
-                                <input style="margin-right:200px;" class="form-control" type="email" name="email"
-                                    id="email" required placeholder="User Email">
+                        <form action="/users/login" method="post" style="padding: 0% 0%;">
+                            <%-include("./partials/messages")-%>
+                            <div class="form-row">
+                                <input type="email" id="email" name="email" class="form-control"
+                                    placeholder="Enter Email" />
                             </div>
-                            <div class="row">
-                                <input style="margin-right:200px;" class="form-control" type="password" name="password"
-                                    id="password" required placeholder="User password">
+                            <div class="form-row">
+                                <input type="password" id="password" name="password" class="form-control"
+                                    placeholder="Enter Password" />
                             </div>
-                            <div class="row" style="margin-top: 10px;">
-                                <button type="submit" class="btn btn-lg btn-primary">Sign In</button>
-                                <a href="/register" style="text-decoration: none;padding:5px 100px;margin-left:10px"
-                                    class="btn btn-lg btn-secondary">Sign Up Here</a>
+                            <div class="form-row">
+                                <button type="submit" class="btn btn-primary"
+                                    style="padding-left: 60px;padding-right: 60px;border: 1px solid black"> Go </button>
+                                <a href="/users/register" class="btn btn-primary"
+                                    style="margin-left:50px;padding-left: 60px;padding-right: 60px;border:1px solid black">
+                                    Register </a>
                             </div>
-                            <div class="row">
-                                <% if(messages.error){ %>
-                                <h2
-                                    style="padding:10px 10px;margin: 5px 0px; border:1px solid grey;border-radius: 5px; background: grey;color:white;">
-                                    <%= messages.error %></h2>
-                                <% } %>
-                            </div>
+                            </br>
                         </form>
                     </div>
                     
